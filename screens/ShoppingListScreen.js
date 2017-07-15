@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 class ShoppingListScreen extends Component {
+  static navigationOptions = {
+    title: 'Shopping List',
+  };
   render() {
     return (
       <View>
