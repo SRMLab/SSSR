@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import {
-  FETCH_ITEMS
+  FETCH_ITEMS,
 } from './types';
 
 export const fetchItems = () => {
@@ -11,3 +11,15 @@ export const fetchItems = () => {
       });
   };
 };
+
+export const addItem = ({ name, category, unit }, callback) => {
+  return (dispatch) => {
+    firebase.database().ref('/items')
+      .push({ name, category, unit })
+      .then(() => {
+        callback();
+        // dispatch({ type: FETCH_ITEMS, payload: snapshot.val() });
+      })
+  };
+};
+

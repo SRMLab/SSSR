@@ -1,9 +1,9 @@
 import {
-  FETCH_ITEMS
+  FETCH_ITEMS,
 } from '../actions/types';
 
 const INITIAL_STATE = {
-  items: []
+  items: {}
 };
 
 export default function(state = INITIAL_STATE, action) {

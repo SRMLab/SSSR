@@ -19,18 +19,6 @@ import { fetchItems } from './actions';
 export default class App extends React.Component {
   componentWillMount() {
     firebase.initializeApp(firebaseConfig);
-    // console.log("starting...")
-    // fetchItems();
-    // const ref = firebase.database().ref('items');
-    // firebase.database().ref('items')
-    //   .on('value', snapshot => {
-    //     console.log("fetchItems: ", snapshot.val())
-    //     // dispatch({ type: FETCH_ITEMS, payload: snapshot.val() });
-    //   });
-    // firebase.database().ref('itemsTest')
-    //   .set({
-    //     name: "testqqq"
-    //   });
   }
   render() {
     const MainNavigator = TabNavigator({
