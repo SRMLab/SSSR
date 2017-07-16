@@ -1,4 +1,3 @@
-// import axios from 'axios';
 import firebase from 'firebase';
 import {
   FETCH_ITEMS
@@ -6,7 +5,7 @@ import {
 
 export const fetchItems = () => {
   return (dispatch) => {
-    firebase.database().ref('/itemsTest')
+    firebase.database().ref('/items')
       .on('value', snapshot => {
         dispatch({ type: FETCH_ITEMS, payload: snapshot.val() });
       });
